@@ -174,3 +174,30 @@ document.addEventListener('DOMContentLoaded', function () {
         horizonBlocks.forEach(block => block.classList.add('active'));
     }
 });
+
+
+
+
+
+
+  // Disable right-click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Disable certain key combos
+  document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || // F12
+      (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || // Ctrl+Shift+I or J
+      (e.ctrlKey && e.keyCode == 85) // Ctrl+U
+    ) {
+      return false;
+    }
+  };
+
+
+
+
+
+
+
+
